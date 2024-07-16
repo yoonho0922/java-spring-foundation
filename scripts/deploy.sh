@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/ec2-user/dev
+REPOSITORY=/Users/yoonho/workspace/java
 PROJECT_NAME=java-spring-foundation
 
 cd $REPOSITORY/$PROJECT_NAME/   # ②
