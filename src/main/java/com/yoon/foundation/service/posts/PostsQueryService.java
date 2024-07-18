@@ -33,6 +33,7 @@ public class PostsQueryService {
         return postsRepository.findPostsList(filter);
     }
 
+    // queryPage 함수를 내부 코드에서 의존하면 안됨 (Controller에서만 사용)
     public PostsPageResponse queryPage(Pageable pageable, PostsQueryFilter request) {
         long page = pageable.getOffset();
         long size = pageable.getPageSize();
