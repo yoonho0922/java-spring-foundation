@@ -1,4 +1,4 @@
-package com.yoon.foundation.common;
+package com.yoon.foundation.common.pagequery;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

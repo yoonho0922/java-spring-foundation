@@ -1,6 +1,6 @@
 package com.yoon.foundation.service.posts;
 
-import com.yoon.foundation.common.PageInfoResponse;
+import com.yoon.foundation.common.pagequery.PageInfoResponse;
 import com.yoon.foundation.domain.posts.Posts;
 import com.yoon.foundation.dto.posts.PostsPageResponse;
 import com.yoon.foundation.repository.posts.PostsQueryFilter;

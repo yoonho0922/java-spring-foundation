@@ -1,4 +1,4 @@
-package com.yoon.foundation.common;
+package com.yoon.foundation.common.pagequery;
 
 
 import io.swagger.v3.oas.annotations.media.Schema;
