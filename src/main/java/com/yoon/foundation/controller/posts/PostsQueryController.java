@@ -1,7 +1,7 @@
 package com.yoon.foundation.controller.posts;
 
-import com.yoon.foundation.common.CommonResponse;
-import com.yoon.foundation.common.PageQueryRequest;
+import com.yoon.foundation.common.response.CommonResponse;
+import com.yoon.foundation.common.pagequery.PageQueryRequest;
 import com.yoon.foundation.domain.posts.Posts;
 import com.yoon.foundation.dto.posts.PostsPageResponse;
 import com.yoon.foundation.dto.posts.PostsQueryResponse;

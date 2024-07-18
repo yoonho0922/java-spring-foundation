@@ -1,7 +1,7 @@
 package com.yoon.foundation.dto.posts;
 
-import com.yoon.foundation.common.PageInfoResponse;
-import com.yoon.foundation.common.PageResponse;
+import com.yoon.foundation.common.pagequery.PageInfoResponse;
+import com.yoon.foundation.common.pagequery.PageResponse;
 import com.yoon.foundation.domain.posts.Posts;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

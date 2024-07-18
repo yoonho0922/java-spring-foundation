@@ -1,6 +1,6 @@
 package com.yoon.foundation.controller.posts;
 
-import com.yoon.foundation.common.CommonResponse;
+import com.yoon.foundation.common.response.CommonResponse;
 import com.yoon.foundation.dto.posts.PostsCreateRequest;
 import com.yoon.foundation.service.posts.PostsService;
 import com.yoon.foundation.dto.posts.PostsUpdateRequest;

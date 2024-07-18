@@ -1,4 +1,4 @@
-package com.yoon.foundation.common;
+package com.yoon.foundation.common.response;
 
 public record ErrorResponse(
         String message,
