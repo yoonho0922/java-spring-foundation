@@ -36,6 +36,5 @@ out/
 ### VS Code ###
 .vscode/
 
-### QueryDSL ###
-!**/src/main/generated
-/Users/yoonho/workspace/java/java-spring-foundation/src/main/generated
+### Querydsl ###
+/src/main/generated/
