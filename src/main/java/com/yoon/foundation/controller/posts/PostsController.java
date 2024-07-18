@@ -1,5 +1,6 @@
 package com.yoon.foundation.controller.posts;
 
+import com.yoon.foundation.common.CommonResponse;
 import com.yoon.foundation.dto.posts.PostsCreateRequest;
 import com.yoon.foundation.service.posts.PostsService;
 import com.yoon.foundation.dto.posts.PostsUpdateRequest;
@@ -13,24 +14,27 @@ public class PostsController {
     private final PostsService postsService;
 
     @PostMapping
-    public Long save(
+    public CommonResponse<Long> save(
             @RequestBody PostsCreateRequest request
     ) {
-        return postsService.create(request);
+        Long postsId = postsService.create(request);
+        return CommonResponse.success(postsId);
     }
 
     @PutMapping("{postsId}")
-    public Long update(
+    public CommonResponse<Long> update(
             @PathVariable("postsId") Long postsId,
             @RequestBody PostsUpdateRequest request
     ) {
-        return postsService.update(postsId, request);
+        Long updatedPostsId = postsService.update(postsId, request);
+        return CommonResponse.success(updatedPostsId);
     }
 
     @DeleteMapping("{postsId}")
-    public void delete(
+    public CommonResponse<Object> delete(
             @PathVariable("postsId") Long postsId
     ) {
         postsService.delete(postsId);
+        return CommonResponse.success(null);
     }
 }

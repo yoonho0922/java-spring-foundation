@@ -1,8 +1,10 @@
 package com.yoon.foundation.controller.posts;
 
+import com.yoon.foundation.common.CommonResponse;
 import com.yoon.foundation.common.PageQueryRequest;
 import com.yoon.foundation.domain.posts.Posts;
 import com.yoon.foundation.dto.posts.PostsPageResponse;
+import com.yoon.foundation.dto.posts.PostsQueryResponse;
 import com.yoon.foundation.repository.posts.PostsQueryFilter;
 import com.yoon.foundation.service.posts.PostsQueryService;
 import lombok.RequiredArgsConstructor;
@@ -19,20 +21,22 @@ public class PostsQueryController {
     private final PostsQueryService postsQueryService;
 
     @GetMapping("{postsId}")
-    public Posts queryOne(
+    public CommonResponse<PostsQueryResponse> queryOne(
             @PathVariable("postsId") Long postsId
     ) {
-        return postsQueryService.queryOne(postsId);
+        Posts posts = postsQueryService.queryOne(postsId);
+        return CommonResponse.success(new PostsQueryResponse(posts));
     }
 
     @GetMapping("page")
-    public PostsPageResponse queryPage(
+    public CommonResponse<PostsPageResponse> queryPage(
             @ParameterObject PostsQueryFilter filter,
             @ParameterObject PageQueryRequest pageQueryRequest
     ) {
-        return postsQueryService.queryPage(
+        PostsPageResponse postsPageResponse = postsQueryService.queryPage(
                 pageQueryRequest.toPageable(),
                 filter
         );
+        return CommonResponse.success(postsPageResponse);
     }
 }
